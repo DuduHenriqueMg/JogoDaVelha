@@ -40,12 +40,15 @@ function updateSquares() {
     })
 }
 
-restart.addEventListener("click", function(){
+restart.addEventListener("click",()=>{
 
+    console.log("funcionando")
     for (let i = 0; i < squares.length; i++) {
         if (gameOver == true) {
-            
-            
+            updateSquares
+            let board = ['', '', '', '', '', '', '', '', '',];
+            let playerTime = 0;
+            return;
         }
         
     }
