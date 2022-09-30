@@ -31,7 +31,6 @@ function handleClick(event) {
     },10);
 } 
 
-
 function updateSquare(position) {
 
     let square = document.getElementById(position.toString());
