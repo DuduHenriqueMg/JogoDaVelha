@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function handleClick(event) {
+
+    let square = event.target;
+    let position = square.id;
     
     if(handleMove(event.target.id)) {
         setTimeout(() => {
@@ -17,40 +20,32 @@ function handleClick(event) {
         },10); 
     };
 
-    updateSquares();
+    updateSquare(position) 
 } 
 
-// function updateSquare(position) {
-//     let square = document.getElementById(position.toString);
-//     let symbol = board[position];
-//     square.innerHTML=`<div class='${symbol}'></div>`;
-// }
 
-function updateSquares() {
+function updateSquare(position) {
 
-    let squares = document.querySelectorAll(".square");
+    let square = document.getElementById(position.toString());
+    let symbol = board[position];
+    square.innerHTML=`<div class='${symbol}'></div>`;
 
-    squares.forEach((square) => {
-        let position = square.id;
-        let symbol = board[position];
-
-        if (symbol != '') {
-            square.innerHTML=`<div class='${symbol}'></div>`;
-        }
-    })
 }
 
-restart.addEventListener("click",()=>{
-
-    console.log("funcionando")
-    for (let i = 0; i < squares.length; i++) {
-        if (gameOver == true) {
-            updateSquares
-            let board = ['', '', '', '', '', '', '', '', '',];
-            let playerTime = 0;
-            return;
-        }
+function restart() {
+    
+    let squares = document.getElementsByClassName("square");
+    let board = ['', '', '', '', '', '', '', '', '',];
+    let playerTime = 0;
+    let gameOver = false;
+    
+    for(let i = 0; i < squares.length; i++){
         
-    }
-})
+        squares[i].innerHTML ='';
+        square.innerHTML=`<div class='${symbol}'></div>`;
+     }
+   
+    console.log("funcionando");
+    
+}
 
