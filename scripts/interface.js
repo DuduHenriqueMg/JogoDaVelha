@@ -16,18 +16,21 @@ function handleClick(event) {
     
     if(handleMove(event.target.id)) {
         setTimeout(() => {
-            alert("O jogo acabou! E o vencedor foi o jogador " + playerTime)
+            if(playerTime === 0){
+                alert("O jogo acabou! E o vencedor foi o jogador O")
+            }else{
+                alert("O jogo acabou! E o vencedor foi o jogador X")
+            }
         },10); 
     };
 
-    updateSquare(position) 
+    updateSquare(position);
+
+    setTimeout(() => {
+        update();
+    },10);
 } 
 
-<<<<<<< Updated upstream
-=======
-
-function updateSquares() {
->>>>>>> Stashed changes
 
 function updateSquare(position) {
 
@@ -37,27 +40,32 @@ function updateSquare(position) {
 
 }
 
-function restart() {
-<<<<<<< Updated upstream
+function restart(){
+  
+    board = ['', '', '', '', '', '', '', '', ''];
+    gameOver = false;
+    playerTime = 0;
     
-    let squares = document.getElementsByClassName("square");
-    let board = ['', '', '', '', '', '', '', '', '',];
-    let playerTime = 0;
-    let gameOver = false;
-    
-    for(let i = 0; i < squares.length; i++){
-        
-        squares[i].innerHTML ='';
-        square.innerHTML=`<div class='${symbol}'></div>`;
-     }
+    cleanBoard();
+  
+  } 
    
-    console.log("funcionando");
-    
-=======
-    let playerTime = 0;
-    let gameOver =false;
-    updateSquares();
-    console.log("funcionando");
->>>>>>> Stashed changes
+function cleanBoard(){
+  
+    let squares = document.querySelectorAll(".square")
+  
+    squares.forEach((square) => {
+        square.innerHTML = '';
+    })
+  
+  }
+
+function update() {
+   if(gameOver == true) {
+       return restart();
+   } 
 }
+
+
+    
 

@@ -1,12 +1,17 @@
 *{
     text-align: center;
-    background-color:beige;
+    background-color:rgb(42, 42, 44);
+    font-family: Righteous, Courier, monospace;
 }
 
 h1{
-    font-family: Righteous, Courier, monospace;
+    padding: 20px;
     font-size: 50px;
     margin-bottom: 50px;
+    color: rgb(202, 202, 202);
+    border: solid 2px;
+    
+    border-radius:10px
 }
 
 
@@ -14,9 +19,13 @@ h1{
 
     width: 100px;
     height: 100px;
-    background-color:rgb(224, 223, 217);
+    background-color:rgb(202, 202, 202);
     border: 2px solid rgb(0, 0, 0);
     display: inline-block;
+}
+
+.o, .x{
+    font-size: 900px;
 }
 
 .o{
@@ -25,7 +34,7 @@ h1{
 
 .o:after{
     position: absolute;
-    content: "o";
+    content: "O";
     font-size: 50px;
     line-height: 100px;
     top: 0;
@@ -39,7 +48,7 @@ h1{
 
 .x:after{
     position: absolute;
-    content: "x";
+    content: "X";
     font-size: 50px;
     line-height: 100px;
     top: 0;
@@ -56,20 +65,19 @@ h1{
 #btn{
     
     display: inline-block;
-    font-size: 18px;
-    background-color: rgb(20, 77, 131);
-    color : white;
-    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(88, 49, 49);
+    color :rgb(202, 202, 202);
+    padding: 15px;
     border: none;
     border-radius: 10px;
-
     transition: background-color 300ms 100ms ease-out, padding 300ms 100ms ease-out;
     
 }
 
 #btn:hover{
     
-    background-color: rgb(10, 47, 82);
+    background-color: rgb(71, 31, 31);
+    padding: 17px;
     
-    padding: 12px;
 } 
