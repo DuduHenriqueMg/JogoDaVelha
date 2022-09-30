@@ -23,6 +23,11 @@ function handleClick(event) {
     updateSquare(position) 
 } 
 
+<<<<<<< Updated upstream
+=======
+
+function updateSquares() {
+>>>>>>> Stashed changes
 
 function updateSquare(position) {
 
@@ -33,6 +38,7 @@ function updateSquare(position) {
 }
 
 function restart() {
+<<<<<<< Updated upstream
     
     let squares = document.getElementsByClassName("square");
     let board = ['', '', '', '', '', '', '', '', '',];
@@ -47,5 +53,11 @@ function restart() {
    
     console.log("funcionando");
     
+=======
+    let playerTime = 0;
+    let gameOver =false;
+    updateSquares();
+    console.log("funcionando");
+>>>>>>> Stashed changes
 }
 
